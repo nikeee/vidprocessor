@@ -1,0 +1,17 @@
+{
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc",
+		"*.tsx": "$(capture).module.scss"
+	},
+	"cSpell.language": "en",
+	"cSpell.words": ["fastify", "ffprobe", "ffmpeg", "vidprocessor", "openapi"],
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
+	"[javascript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	}
+}

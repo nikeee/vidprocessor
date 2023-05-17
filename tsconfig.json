@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "NodeNext",
+
+    "lib": ["es2022"],
+    "declaration": false,
+
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+
+    "removeComments": true,
+
+    "strict": true,
+
+    "inlineSourceMap": true,
+    "inlineSources": true,
+
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
