@@ -38,7 +38,7 @@
     "@types/fluent-ffmpeg": "^2.1.21",
     "@types/http-errors": "^2.0.1",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^20.1.7",
+    "@types/node": "^20.2.5",
     "pino-pretty": "^10.0.0",
     "rome": "^12.1.1",
     "typescript": "^5.0.4"
