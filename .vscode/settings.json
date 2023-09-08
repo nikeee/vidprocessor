@@ -9,9 +9,9 @@
 	"cSpell.words": ["fastify", "ffprobe", "ffmpeg", "vidprocessor", "openapi"],
 	"editor.formatOnSaveMode": "modificationsIfAvailable",
 	"[javascript]": {
-		"editor.defaultFormatter": "rome.rome"
+		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "rome.rome"
+		"editor.defaultFormatter": "biomejs.biome"
 	}
 }

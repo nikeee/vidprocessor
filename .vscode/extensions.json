@@ -2,6 +2,6 @@
 	"recommendations": [
 		"editorconfig.editorconfig",
 		"streetsidesoftware.code-spell-checker",
-		"rome.rome"
+		"biomejs.biome"
 	]
 }
