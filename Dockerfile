@@ -1,28 +1,29 @@
-FROM node:alpine as builder
-    WORKDIR /usr/app
-    COPY package.json package-lock.json ./
-    RUN npm ci
-    COPY . .
-    RUN npm run build
+FROM oven/bun:latest as prod-dependencies
+    WORKDIR /app
+    # ENV RUN NODE_ENV=production
 
-FROM node:alpine as prod-dependencies
-    WORKDIR /usr/app
-    COPY package.json package-lock.json ./
-    RUN npm ci --omit=dev
+    COPY package.json bun.lockb ./
 
-FROM node:alpine
+    RUN bun install
+
+FROM oven/bun:latest
     WORKDIR /app
     ENV NODE_ENV=production
 
-    RUN apk add --no-cache ffmpeg curl
+    RUN apt-get update -yqqq && \
+        apt-get install -yqqq \
+            ffmpeg \
+            curl \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/*
 
-    COPY package.json package-lock.json ./
-    COPY --from=builder /usr/app/node_modules /app/node_modules
+    # RUN apt-get update -yqqq && apt install --no-cache ffmpeg curl
 
-    COPY --from=builder /usr/app/dist /app/dist
+    COPY --from=prod-dependencies /app/node_modules /app/node_modules
+    COPY ./ /app
 
     EXPOSE 8080
-    CMD ["node", "dist/index.js"]
+    CMD ["bun", "src/index.ts"]
 
     HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
         CMD curl --fail -I http://localhost:8080/_health || exit 1

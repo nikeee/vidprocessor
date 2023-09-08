@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "ci": "biome ci ./",
-    "build": "tsc",
     "test": "tsc --noEmit",
     "format": "biome format . --write"
   },
@@ -39,7 +38,8 @@
     "@types/fluent-ffmpeg": "^2.1.21",
     "@types/http-errors": "^2.0.1",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^20.4.5",
+    "bun": "^1.0.0",
+    "bun-types": "^1.0.1",
     "pino-pretty": "^10.2.0",
     "typescript": "^5.2.2"
   }
