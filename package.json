@@ -41,6 +41,6 @@
     "@types/mime-types": "^2.1.4",
     "@types/node": "^20.14.9",
     "pino-pretty": "^11.2.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.4"
   }
 }
