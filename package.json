@@ -35,7 +35,7 @@
     "mime-types": "^2.1.35"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.3",
     "@types/fluent-ffmpeg": "^2.1.26",
     "@types/http-errors": "^2.0.4",
     "@types/mime-types": "^2.1.4",
