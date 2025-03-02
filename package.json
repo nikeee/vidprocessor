@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "ci": "biome ci ./",
+    "ci": "biome ci ./src",
     "build": "tsc",
     "test": "tsc --noEmit",
-    "format": "biome format . --write"
+    "format": "biome format ./src --write"
   },
   "repository": {
     "type": "git",
