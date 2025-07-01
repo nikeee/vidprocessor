@@ -37,7 +37,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/fluent-ffmpeg": "^2.1.27",
-    "@types/http-errors": "^2.0.4",
+    "@types/http-errors": "^2.0.5",
     "@types/mime-types": "^3.0.0",
     "@types/node": "^22.15.29",
     "pino-pretty": "^13.0.0",
